@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .button {
+      width: 300px;
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>DICTIONARY</h1>
+  <div class="button-container">
+    <a href="#" class="button" id="btn1">Link 1</a>
+    <a href="#" class="button" id="btn2">Link 2</a>
+    <a href="#" class="button" id="btn3">Link 3</a>
+    <a href="#" class="button" id="btn4">Link 4</a>
+    <a href="#" class="button" id="btn5">Link 5</a>
+  </div>
+
+  <script>
+    // Example dictionary with links and titles
+    const links = {
+      btn1: { title: "German dict.py", url: "" },
+      btn2: { title: "Spanish dict.py", url: "" },
+      btn3: { title: "French dict.py", url: "" },
+      btn4: { title: "Italian dict.py", url: "" },
+      btn5: { title: "Portuguese dict.py", url: "" },
+    };
+
+    // Assign links and titles to buttons
+    Object.keys(links).forEach((key) => {
+      const button = document.getElementById(key);
+      button.textContent = links[key].title;
+      button.href = links[key].url;
+    });
+  </script>
+</body>
+</html>
